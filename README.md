@@ -1,6 +1,6 @@
 # Hello World
 
-A simple "hello world" project with Scala 3.7.3 and sbt.
+A simple "hello world" project with Scala 3.9.0 and sbt 2.
 
 ## Preliminaries
 To run the project, you need to have a few things installed:
