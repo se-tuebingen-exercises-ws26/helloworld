@@ -28,35 +28,35 @@ $ sbt
 ```
 If everything goes well, you will be greeted with a prompt:
 ```
-[info] welcome to sbt 1.7.1 (Homebrew Java 19)
-[info] loading global plugins from /Users/jonathan/.sbt/1.0/plugins
-[info] loading project definition from /private/tmp/helloworld/project
-[info] loading settings for project helloworld from build.sbt ...
-[info] set current project to helloworld (in build file:/private/tmp/helloworld/)
-[info] sbt server started at local:///Users/jonathan/.sbt/1.0/server/b4d7872362a29e152887/sock
-[info] started sbt server
+[info] entering thin client - BEEP WHIRR
+[info] starting sbt server in the background
+[info] use 'sbt shutdown' to shutdown the server
+[info]  
+[info] welcome to sbt 2.0.9 (Azul Systems, Inc. Java 21.0.11)
+[info] loading project definition from /Users/gaisseml/teaching/se/ws26/homework/helloworld/project
+[info] set current project to helloworld (in build file:/Users/gaisseml/teaching/se/ws26/homework/helloworld/)
 sbt:helloworld>
 ```
 Here you can run many different commands to interact with your program. The most important ones for now are
 
 - `run` -- this will run the program.
 - `compile` -- this will compile the source code into Java byte code (you can find the generated code in the `target` folder)
+- `shutdown` -- terminate the background daemon (that makes it faster on subsequent runs, but might consume some resources)
 
 Simply enter `run`, and sbt will do all the heavy lifting. It downloads the correct version of the Scala language
 compiler for you. Afterwards, it compiles the file `hello.scala`. Finally, it runs the method marked with `@main`.
 You should see something similar to the following output:
 ```
 sbt:helloworld> run
-[info] compiling 1 Scala source to /private/tmp/helloworld/target/scala-3.2.0/classes ...
-[info] running sayHello
-Hey, what's your name? (please press <Enter> after entering your name)
+[info] running (fork) sayHello 
+Hey, what's your name??? (please press <Enter> after entering your name)
 Jonathan
 Hello there, Jonathan!
 
 Seems like you have all dependencies set up correctly.
-Apparently, this application is running on Mac OS X with JDK 19.
+Apparently, this application is running on Mac OS X with JDK 21.0.11.
 
-[success] Total time: 2 s, completed 12 Oct 2022, 17:59:26
+[success] ok
 sbt:helloworld>
 ```
 The application will ask you for your name and then print back a simple greeting,
