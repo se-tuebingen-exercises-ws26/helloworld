@@ -6,7 +6,7 @@ A simple "hello world" project with Scala 3.9.0 and sbt 2.
 To run the project, you need to have a few things installed:
 
 - a recent version of the JDK (>= 17)
-- the sbt build tool
+- the sbt build tool (major version 2)
 
 If you are missing a dependency, the [forum](https://ps-forum.cs.uni-tuebingen.de/c/se/anleitungen-und-erklaerungen) will provide detailed guides on how to install them.
 
